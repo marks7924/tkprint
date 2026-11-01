@@ -88,8 +88,8 @@ export const Navbar: React.FC = () => {
                     <Link
                       href={link.href}
                       className={`inline-flex items-center gap-1 text-sm font-semibold transition-colors py-2 ${isActive
-                          ? 'text-[#D982A5] border-b-2 border-[#D982A5]'
-                          : 'text-[#292329] hover:text-[#D982A5]'
+                        ? 'text-[#D982A5] border-b-2 border-[#D982A5]'
+                        : 'text-[#292329] hover:text-[#D982A5]'
                         }`}
                     >
                       {link.label}
@@ -120,8 +120,8 @@ export const Navbar: React.FC = () => {
                   key={link.href}
                   href={link.href}
                   className={`text-sm font-semibold transition-colors py-2 ${isActive
-                      ? 'text-[#D982A5] border-b-2 border-[#D982A5]'
-                      : 'text-[#292329] hover:text-[#D982A5]'
+                    ? 'text-[#D982A5] border-b-2 border-[#D982A5]'
+                    : 'text-[#292329] hover:text-[#D982A5]'
                     }`}
                 >
                   {link.label}
@@ -280,8 +280,8 @@ export const Navbar: React.FC = () => {
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
                     className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === link.href
-                        ? 'bg-[#FFF0F4] text-[#D982A5] font-bold'
-                        : 'text-[#292329] hover:bg-[#FFF8FA]'
+                      ? 'bg-[#FFF0F4] text-[#D982A5] font-bold'
+                      : 'text-[#292329] hover:bg-[#FFF8FA]'
                       }`}
                   >
                     {link.label}
