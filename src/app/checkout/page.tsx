@@ -90,7 +90,7 @@ export default function CheckoutPage() {
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        
+
         {/* Header */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-2 shadow-2xs">
@@ -103,10 +103,10 @@ export default function CheckoutPage() {
         </div>
 
         <form onSubmit={handleSubmitOrder} className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
+
           {/* LEFT: Shipping & Contact Form */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-[#F0E4E9] soft-shadow space-y-6">
-            
+
             {/* Contact Details */}
             <div>
               <h3 className="font-black text-base text-[#292329] mb-4 flex items-center gap-2">
@@ -241,11 +241,10 @@ export default function CheckoutPage() {
                 <button
                   type="button"
                   onClick={() => setPaymentMethod('cod')}
-                  className={`p-4 rounded-2xl border text-start transition-all flex items-start gap-3 ${
-                    paymentMethod === 'cod'
+                  className={`p-4 rounded-2xl border text-start transition-all flex items-start gap-3 ${paymentMethod === 'cod'
                       ? 'border-[#D982A5] bg-[#FFF0F4] ring-2 ring-[#EFA6C1]/40'
                       : 'border-[#F0E4E9] bg-white hover:bg-[#FFF8FA]'
-                  }`}
+                    }`}
                 >
                   <Banknote className="w-5 h-5 text-[#D982A5] mt-0.5" />
                   <div>
@@ -259,11 +258,10 @@ export default function CheckoutPage() {
                 <button
                   type="button"
                   onClick={() => setPaymentMethod('card')}
-                  className={`p-4 rounded-2xl border text-start transition-all flex items-start gap-3 ${
-                    paymentMethod === 'card'
+                  className={`p-4 rounded-2xl border text-start transition-all flex items-start gap-3 ${paymentMethod === 'card'
                       ? 'border-[#D982A5] bg-[#FFF0F4] ring-2 ring-[#EFA6C1]/40'
                       : 'border-[#F0E4E9] bg-white hover:bg-[#FFF8FA]'
-                  }`}
+                    }`}
                 >
                   <CreditCard className="w-5 h-5 text-[#D982A5] mt-0.5" />
                   <div>
@@ -304,10 +302,10 @@ export default function CheckoutPage() {
                       {item.itemType === 'custom'
                         ? `كفر مخصص (${item.selectedModelName})`
                         : item.itemType === 'matching'
-                        ? 'كفرات ثنائية متناسقة'
-                        : language === 'ar'
-                        ? item.product?.nameAr
-                        : item.product?.nameEn}
+                          ? 'كفرات ثنائية متناسقة'
+                          : language === 'ar'
+                            ? item.product?.nameAr
+                            : item.product?.nameEn}
                     </h4>
                     <span className="text-[10px] text-[#817780] block">
                       {item.selectedModelName} × {item.quantity}
@@ -376,3 +374,4 @@ export default function CheckoutPage() {
     </div>
   );
 }
+

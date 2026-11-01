@@ -14,7 +14,7 @@ export const CollectionsSection: React.FC = () => {
   return (
     <section className="py-12 bg-white border-y border-[#F0E4E9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
@@ -52,7 +52,7 @@ export const CollectionsSection: React.FC = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-                
+
                 {/* Floating Heart Icon */}
                 <div className="absolute top-3 end-3 w-8 h-8 rounded-full bg-white/80 backdrop-blur-xs flex items-center justify-center text-[#D982A5] shadow-xs">
                   <Heart className="w-4 h-4 fill-[#D982A5]/20 stroke-[#D982A5]" />
@@ -87,3 +87,4 @@ export const CollectionsSection: React.FC = () => {
     </section>
   );
 };
+

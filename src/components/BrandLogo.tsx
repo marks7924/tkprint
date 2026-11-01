@@ -7,26 +7,31 @@ interface BrandLogoProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
   showSubtitle?: boolean;
+  asLink?: boolean;
 }
 
 export const BrandLogo: React.FC<BrandLogoProps> = ({
   className = '',
   size = 'md',
-  showSubtitle = true
+  showSubtitle = true,
+  asLink = true
 }) => {
-  const sizeClasses = {
-    sm: 'h-8',
-    md: 'h-11',
-    lg: 'h-16'
+  const sizeConfig = {
+    sm: { imgClass: 'h-8 w-8', px: 32 },
+    md: { imgClass: 'h-11 w-11', px: 44 },
+    lg: { imgClass: 'h-16 w-16', px: 64 }
   };
 
-  return (
-    <Link href="/" className={`inline-flex items-center gap-2 group transition-transform ${className}`}>
-      <div className="relative overflow-hidden rounded-xl shadow-sm border border-[#EFA6C1]/30 bg-[#EFA6C1] flex items-center justify-center p-0.5 transition-transform group-hover:scale-105">
+  const currentSize = sizeConfig[size] || sizeConfig.md;
+
+  const content = (
+    <>
+      <div className="relative overflow-hidden rounded-xl shadow-sm border border-[#EFA6C1]/30 bg-[#EFA6C1] flex items-center justify-center p-0.5 transition-transform group-hover:scale-105 flex-shrink-0">
         <img
           src="/assets/logo.jpg"
           alt="TK-PRINT Official Logo"
-          className={`${sizeClasses[size]} w-auto object-contain rounded-lg`}
+          style={{ width: `${currentSize.px}px`, height: `${currentSize.px}px`, objectFit: 'contain' }}
+          className={`${currentSize.imgClass} object-contain rounded-lg flex-shrink-0`}
         />
       </div>
       {showSubtitle && (
@@ -39,6 +44,20 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
           </span>
         </div>
       )}
+    </>
+  );
+
+  if (!asLink) {
+    return (
+      <div className={`inline-flex items-center gap-2 group ${className}`}>
+        {content}
+      </div>
+    );
+  }
+
+  return (
+    <Link href="/" className={`inline-flex items-center gap-2 group transition-transform ${className}`}>
+      {content}
     </Link>
   );
 };

@@ -41,7 +41,7 @@ function ConfirmationContent() {
 
       <main className="flex-1 max-w-3xl w-full mx-auto px-4 sm:px-6 py-12">
         <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 border border-[#F0E4E9] soft-shadow-lg text-center">
-          
+
           {/* Success Check Icon */}
           <div className="w-20 h-20 rounded-full bg-emerald-50 text-emerald-600 mx-auto flex items-center justify-center mb-6 border-4 border-emerald-100">
             <CheckCircle2 className="w-10 h-10" />
@@ -133,3 +133,4 @@ export default function OrderConfirmationPage() {
     </Suspense>
   );
 }
+

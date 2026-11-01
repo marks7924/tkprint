@@ -33,7 +33,7 @@ interface StoreContextType {
   shippingRates: ShippingRate[];
   coupons: Coupon[];
   communityPosts: CommunityPost[];
-  
+
   // Selected Device (Find Your Phone)
   selectedBrand: PhoneBrand | null;
   selectedModel: PhoneModel | null;
@@ -149,25 +149,25 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       localStorage.setItem('tk_cart', JSON.stringify(cart));
-    } catch {}
+    } catch { }
   }, [cart]);
 
   useEffect(() => {
     try {
       localStorage.setItem('tk_wishlist', JSON.stringify(wishlist));
-    } catch {}
+    } catch { }
   }, [wishlist]);
 
   useEffect(() => {
     try {
       localStorage.setItem('tk_orders', JSON.stringify(orders));
-    } catch {}
+    } catch { }
   }, [orders]);
 
   useEffect(() => {
     try {
       localStorage.setItem('tk_products', JSON.stringify(products));
-    } catch {}
+    } catch { }
   }, [products]);
 
   const showToast = (msg: string) => {
@@ -455,3 +455,4 @@ export function useStore() {
   }
   return context;
 }
+

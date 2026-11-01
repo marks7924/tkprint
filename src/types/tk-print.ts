@@ -238,3 +238,4 @@ export interface DesignOfWeekVote {
   isWinner?: boolean;
   weekRange: string;
 }
+

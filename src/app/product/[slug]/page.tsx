@@ -106,7 +106,7 @@ export default function ProductDetailPage({
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        
+
         {/* Breadcrumb */}
         <div className="text-xs text-[#817780] mb-6 flex items-center gap-2">
           <span>{t('nav.home')}</span>
@@ -120,7 +120,7 @@ export default function ProductDetailPage({
 
         {/* 2 Columns: Image Gallery & Product Buy Box */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          
+
           {/* LEFT: Image Gallery */}
           <div className="lg:col-span-6 flex flex-col gap-4">
             <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-white border border-[#F0E4E9] soft-shadow-lg relative p-4 flex items-center justify-center">
@@ -131,11 +131,10 @@ export default function ProductDetailPage({
               />
               <button
                 onClick={() => toggleWishlist(product.id)}
-                className={`absolute top-6 end-6 p-3 rounded-full backdrop-blur-md transition-colors ${
-                  isWishlisted
+                className={`absolute top-6 end-6 p-3 rounded-full backdrop-blur-md transition-colors ${isWishlisted
                     ? 'bg-[#D982A5] text-white'
                     : 'bg-white/80 text-[#817780] hover:text-[#D982A5]'
-                }`}
+                  }`}
               >
                 <Heart className={`w-5 h-5 ${isWishlisted ? 'fill-current' : ''}`} />
               </button>
@@ -148,11 +147,10 @@ export default function ProductDetailPage({
                   <button
                     key={idx}
                     onClick={() => setActiveImageIndex(idx)}
-                    className={`w-20 h-24 rounded-2xl overflow-hidden border-2 transition-all ${
-                      activeImageIndex === idx
+                    className={`w-20 h-24 rounded-2xl overflow-hidden border-2 transition-all ${activeImageIndex === idx
                         ? 'border-[#D982A5] ring-2 ring-[#EFA6C1]/30'
                         : 'border-[#F0E4E9] opacity-70 hover:opacity-100'
-                    }`}
+                      }`}
                   >
                     <img src={img} alt="thumbnail" className="w-full h-full object-cover" />
                   </button>
@@ -163,7 +161,7 @@ export default function ProductDetailPage({
 
           {/* RIGHT: Product Buy Box */}
           <div className="lg:col-span-6 bg-white rounded-[2.5rem] p-8 border border-[#F0E4E9] soft-shadow space-y-6">
-            
+
             {/* Title & Reviews */}
             <div>
               <div className="flex items-center gap-2 mb-2">
@@ -235,11 +233,10 @@ export default function ProductDetailPage({
                   <button
                     key={type}
                     onClick={() => setSelectedCaseType(type)}
-                    className={`py-2.5 px-3 rounded-xl border text-xs font-bold capitalize transition-colors ${
-                      selectedCaseType === type
+                    className={`py-2.5 px-3 rounded-xl border text-xs font-bold capitalize transition-colors ${selectedCaseType === type
                         ? 'border-[#D982A5] bg-[#FFF0F4] text-[#D982A5]'
                         : 'border-[#F0E4E9] bg-white text-[#292329] hover:bg-[#FFF8FA]'
-                    }`}
+                      }`}
                   >
                     {type}
                   </button>
@@ -309,11 +306,10 @@ export default function ProductDetailPage({
                   </div>
                   <button
                     onClick={() => setAddCompanion(!addCompanion)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${
-                      addCompanion
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors ${addCompanion
                         ? 'bg-emerald-600 text-white'
                         : 'bg-white border border-[#F0E4E9] text-[#292329]'
-                    }`}
+                      }`}
                   >
                     {addCompanion ? '✓ مضاف' : '+ أضف'}
                   </button>
@@ -370,3 +366,4 @@ export default function ProductDetailPage({
     </div>
   );
 }
+

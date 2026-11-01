@@ -12,7 +12,7 @@ export const MatchingCasesTeaser: React.FC = () => {
   return (
     <section className="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="bg-[#FFF8FA] border border-[#F0E4E9] rounded-3xl p-8 sm:p-12 soft-shadow grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        
+
         {/* Left Side: Editorial visual mockup of 2 matching phone cases */}
         <div className="lg:col-span-5 flex items-center justify-center relative">
           <div className="relative flex items-center justify-center w-full max-w-sm">
@@ -100,3 +100,4 @@ export const MatchingCasesTeaser: React.FC = () => {
     </section>
   );
 };
+

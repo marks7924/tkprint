@@ -130,11 +130,10 @@ export default function AdminDashboardPage() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
-                  className={`w-full flex items-center justify-between px-3.5 py-3 rounded-2xl text-xs font-bold transition-all ${
-                    isActive
+                  className={`w-full flex items-center justify-between px-3.5 py-3 rounded-2xl text-xs font-bold transition-all ${isActive
                       ? 'bg-[#FFF0F4] text-[#D982A5] shadow-2xs'
                       : 'text-[#292329] hover:bg-[#FFF8FA]'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center gap-2.5">
                     <Icon className="w-4 h-4 text-[#D982A5]" />
@@ -163,7 +162,7 @@ export default function AdminDashboardPage() {
 
       {/* Main Admin Content */}
       <main className="flex-1 p-6 sm:p-10 overflow-y-auto">
-        
+
         {/* Top bar */}
         <div className="flex items-center justify-between pb-6 mb-8 border-b border-[#F0E4E9]">
           <div>
@@ -530,11 +529,10 @@ export default function AdminDashboardPage() {
 
                   <div className="mt-4 pt-3 border-t border-[#F0E4E9] flex items-center justify-between">
                     <span
-                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                        post.isApproved
+                      className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${post.isApproved
                           ? 'bg-emerald-50 text-emerald-700'
                           : 'bg-amber-50 text-amber-700'
-                      }`}
+                        }`}
                     >
                       {post.isApproved ? 'معتمد ومنشور ✓' : 'قيد المراجعة'}
                     </span>
@@ -645,3 +643,4 @@ export default function AdminDashboardPage() {
     </div>
   );
 }
+

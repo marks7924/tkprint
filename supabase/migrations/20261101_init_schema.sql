@@ -257,3 +257,4 @@ CREATE POLICY "Approved community submissions viewable" ON public.community_subm
 -- Orders: Customers can view their own orders via phone & order number
 CREATE POLICY "Customer can read their own order" ON public.orders
   FOR SELECT USING (true);
+

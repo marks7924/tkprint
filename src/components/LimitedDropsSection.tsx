@@ -42,12 +42,12 @@ export const LimitedDropsSection: React.FC = () => {
     <section className="py-14 bg-gradient-to-b from-[#FFF8FA] to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative rounded-3xl overflow-hidden bg-[#292329] text-white p-8 sm:p-12 shadow-2xl">
-          
+
           {/* Ambient glow */}
           <div className="absolute top-0 end-0 w-96 h-96 bg-[#D982A5]/25 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
+
             {/* Left Content */}
             <div className="lg:col-span-7">
               <div className="flex items-center gap-2 mb-4">
@@ -165,3 +165,4 @@ export const LimitedDropsSection: React.FC = () => {
     </section>
   );
 };
+

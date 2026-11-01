@@ -55,7 +55,7 @@ export default function FindYourPhonePage() {
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        
+
         {/* Title */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-2 shadow-2xs">
@@ -115,11 +115,10 @@ export default function FindYourPhonePage() {
                 setActiveBrandId(b.id);
                 setModelSearch('');
               }}
-              className={`px-6 py-3 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all flex items-center gap-2 ${
-                activeBrandId === b.id
+              className={`px-6 py-3 rounded-2xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all flex items-center gap-2 ${activeBrandId === b.id
                   ? 'bg-[#292329] text-white shadow-md'
                   : 'bg-white text-[#292329] border border-[#F0E4E9] hover:bg-[#FFF0F4]'
-              }`}
+                }`}
             >
               <Smartphone className="w-4 h-4 text-[#D982A5]" />
               <span>{b.name}</span>
@@ -149,11 +148,10 @@ export default function FindYourPhonePage() {
               <button
                 key={m.id}
                 onClick={() => handleSelectModel(m)}
-                className={`group p-5 rounded-3xl border text-center transition-all duration-200 flex flex-col items-center justify-between hover:shadow-lg ${
-                  isThisSelected
+                className={`group p-5 rounded-3xl border text-center transition-all duration-200 flex flex-col items-center justify-between hover:shadow-lg ${isThisSelected
                     ? 'border-[#D982A5] bg-[#FFF0F4] ring-2 ring-[#EFA6C1]/40'
                     : 'border-[#F0E4E9] bg-white hover:border-[#EFA6C1] hover:-translate-y-0.5'
-                }`}
+                  }`}
               >
                 <div className="w-12 h-12 rounded-2xl bg-[#FFF8FA] group-hover:bg-[#FFF0F4] text-[#D982A5] flex items-center justify-center mb-3">
                   <Smartphone className="w-6 h-6" />
@@ -183,3 +181,4 @@ export default function FindYourPhonePage() {
     </div>
   );
 }
+

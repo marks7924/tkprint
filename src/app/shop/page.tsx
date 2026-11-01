@@ -153,7 +153,7 @@ function ShopContent() {
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
+
         {/* Page Header */}
         <div className="mb-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -205,11 +205,10 @@ function ShopContent() {
               <button
                 key={c.id}
                 onClick={() => setSelectedCategory(c.id)}
-                className={`px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition-all ${
-                  selectedCategory === c.id
+                className={`px-4 py-2 rounded-2xl text-xs font-bold whitespace-nowrap transition-all ${selectedCategory === c.id
                     ? 'bg-[#D982A5] text-white shadow-xs'
                     : 'bg-white text-[#292329] border border-[#F0E4E9] hover:bg-[#FFF0F4]'
-                }`}
+                  }`}
               >
                 {language === 'ar' ? c.nameAr : c.nameEn}
               </button>
@@ -219,7 +218,7 @@ function ShopContent() {
 
         {/* Layout Grid: Sidebar Filters + Products */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          
+
           {/* Desktop Left Sidebar Filters */}
           <aside className="hidden lg:block space-y-6 bg-white p-6 rounded-3xl border border-[#F0E4E9] soft-shadow h-fit sticky top-28">
             <div className="flex items-center justify-between pb-3 border-b border-[#F0E4E9]">
@@ -482,3 +481,4 @@ export default function ShopPage() {
     </Suspense>
   );
 }
+

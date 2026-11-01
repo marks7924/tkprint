@@ -162,7 +162,7 @@ export default function CustomStudioPage() {
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
+
         {/* Studio Title */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-2 shadow-2xs">
@@ -183,32 +183,30 @@ export default function CustomStudioPage() {
 
         {/* 2-Column Studio: Left Preview Canvas / Right Tooling Panel */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* LEFT: Live Phone Case Preview Stage */}
           <div className="lg:col-span-5 flex flex-col items-center sticky top-28">
             <div className="relative w-full max-w-sm aspect-[1/2] rounded-[3.2rem] bg-gradient-to-b from-[#FDF2F6] to-[#FCE7F0] p-4 shadow-2xl border-4 border-white flex flex-col justify-between overflow-hidden">
-              
+
               {/* Outer Edge Case Bezel */}
               <div
-                className={`relative w-full h-full rounded-[2.6rem] overflow-hidden flex flex-col justify-between transition-colors shadow-inner ${
-                  caseType === 'matte'
+                className={`relative w-full h-full rounded-[2.6rem] overflow-hidden flex flex-col justify-between transition-colors shadow-inner ${caseType === 'matte'
                     ? 'bg-[#F9EFF3]'
                     : caseType === 'glossy'
-                    ? 'bg-gradient-to-tr from-[#FFF5F8] via-white to-[#FCEEF4]'
-                    : 'bg-white/40 backdrop-blur-md border border-neutral-300'
-                }`}
+                      ? 'bg-gradient-to-tr from-[#FFF5F8] via-white to-[#FCEEF4]'
+                      : 'bg-white/40 backdrop-blur-md border border-neutral-300'
+                  }`}
               >
                 {/* 1. Camera Cutout Template based on device camera layout */}
                 <div
-                  className={`absolute top-4 z-30 bg-[#292329] p-2 rounded-2xl shadow-md flex items-center justify-center ${
-                    currentModel.cameraLayout === 'traffic-light'
+                  className={`absolute top-4 z-30 bg-[#292329] p-2 rounded-2xl shadow-md flex items-center justify-center ${currentModel.cameraLayout === 'traffic-light'
                       ? 'start-4 w-9 h-28 flex-col gap-2 rounded-xl'
                       : currentModel.cameraLayout === 'center-circle'
-                      ? 'start-1/2 -translate-x-1/2 w-20 h-20 rounded-full'
-                      : currentModel.cameraLayout === 'pill-vertical'
-                      ? 'start-4 w-9 h-18 flex-col gap-2 rounded-2xl'
-                      : 'start-4 w-15 h-15 rounded-3xl flex-wrap gap-1.5' // default: square-triple (iPhone Pro)
-                  }`}
+                        ? 'start-1/2 -translate-x-1/2 w-20 h-20 rounded-full'
+                        : currentModel.cameraLayout === 'pill-vertical'
+                          ? 'start-4 w-9 h-18 flex-col gap-2 rounded-2xl'
+                          : 'start-4 w-15 h-15 rounded-3xl flex-wrap gap-1.5' // default: square-triple (iPhone Pro)
+                    }`}
                 >
                   <div className="w-4 h-4 rounded-full bg-neutral-900 border-2 border-neutral-700 shadow-inner" />
                   <div className="w-4 h-4 rounded-full bg-neutral-900 border-2 border-neutral-700 shadow-inner" />
@@ -255,15 +253,14 @@ export default function CustomStudioPage() {
                         color: textColor,
                         fontSize: `${textSize}px`
                       }}
-                      className={`font-black break-words leading-tight ${
-                        fontFamily === 'serif'
+                      className={`font-black break-words leading-tight ${fontFamily === 'serif'
                           ? 'font-serif'
                           : fontFamily === 'mono'
-                          ? 'font-mono'
-                          : fontFamily === 'cursive'
-                          ? 'italic font-serif'
-                          : 'font-sans'
-                      }`}
+                            ? 'font-mono'
+                            : fontFamily === 'cursive'
+                              ? 'italic font-serif'
+                              : 'font-sans'
+                        }`}
                     >
                       {customText}
                     </span>
@@ -327,7 +324,7 @@ export default function CustomStudioPage() {
 
           {/* RIGHT: Step-by-Step Customization Tooling */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-[#F0E4E9] soft-shadow space-y-8">
-            
+
             {/* STEP 1: Choose Device */}
             <div>
               <div className="flex items-center gap-2 mb-3">
@@ -405,11 +402,10 @@ export default function CustomStudioPage() {
                   <button
                     key={item.id}
                     onClick={() => setCaseType(item.id as CaseType)}
-                    className={`p-3 rounded-2xl border text-center transition-all flex flex-col items-center justify-center ${
-                      caseType === item.id
+                    className={`p-3 rounded-2xl border text-center transition-all flex flex-col items-center justify-center ${caseType === item.id
                         ? 'border-[#D982A5] bg-[#FFF0F4] text-[#D982A5] font-black shadow-xs'
                         : 'border-[#F0E4E9] bg-white text-[#292329] hover:bg-[#FFF8FA]'
-                    }`}
+                      }`}
                   >
                     <span className="text-xs font-bold">{language === 'ar' ? item.nameAr : item.nameEn}</span>
                     <span className="text-[10px] text-[#817780] mt-0.5">{item.desc}</span>
@@ -481,11 +477,10 @@ export default function CustomStudioPage() {
                       <button
                         key={f.id}
                         onClick={() => setFontFamily(f.id)}
-                        className={`p-2 rounded-xl text-xs border transition-colors ${
-                          fontFamily === f.id
+                        className={`p-2 rounded-xl text-xs border transition-colors ${fontFamily === f.id
                             ? 'border-[#D982A5] bg-[#FFF0F4] text-[#D982A5] font-black'
                             : 'border-[#F0E4E9] bg-white text-[#292329]'
-                        }`}
+                          }`}
                       >
                         <span className={f.className}>{f.name}</span>
                       </button>
@@ -503,9 +498,8 @@ export default function CustomStudioPage() {
                       <button
                         key={c.id}
                         onClick={() => setTextColor(c.hex)}
-                        className={`w-7 h-7 rounded-full border-2 transition-transform ${
-                          textColor === c.hex ? 'scale-125 border-[#D982A5]' : 'border-neutral-300'
-                        }`}
+                        className={`w-7 h-7 rounded-full border-2 transition-transform ${textColor === c.hex ? 'scale-125 border-[#D982A5]' : 'border-neutral-300'
+                          }`}
                         style={{ backgroundColor: c.hex }}
                         title={c.name}
                       />
@@ -580,3 +574,4 @@ export default function CustomStudioPage() {
     </div>
   );
 }
+

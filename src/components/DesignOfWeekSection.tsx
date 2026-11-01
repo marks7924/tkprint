@@ -128,3 +128,4 @@ export const DesignOfWeekSection: React.FC = () => {
     </section>
   );
 };
+

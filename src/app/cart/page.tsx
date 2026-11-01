@@ -73,7 +73,7 @@ export default function CartPage() {
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        
+
         {/* Title */}
         <div className="mb-8">
           <h1 className="text-3xl sm:text-4xl font-black text-[#292329] tracking-tight">
@@ -105,10 +105,10 @@ export default function CartPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            
+
             {/* LEFT: Items List */}
             <div className="lg:col-span-8 space-y-4">
-              
+
               {/* Free Shipping Progress bar */}
               <div className="bg-white rounded-3xl p-5 border border-[#F0E4E9] soft-shadow">
                 {neededForFreeShipping > 0 ? (
@@ -169,21 +169,21 @@ export default function CartPage() {
                         {item.itemType === 'custom'
                           ? 'استوديو التصميم الحي'
                           : item.itemType === 'matching'
-                          ? 'طقم ثنائي متطابق (-15%)'
-                          : item.itemType === 'bundle'
-                          ? 'باقة توفير خاصة'
-                          : 'كفر أصلي'}
+                            ? 'طقم ثنائي متطابق (-15%)'
+                            : item.itemType === 'bundle'
+                              ? 'باقة توفير خاصة'
+                              : 'كفر أصلي'}
                       </span>
                       <h3 className="font-black text-sm text-[#292329] mt-0.5">
                         {item.itemType === 'custom'
                           ? `كفر مخصص — ${item.selectedModelName}`
                           : item.itemType === 'matching'
-                          ? `${item.matchingPair?.pairName} (ثنائي)`
-                          : item.itemType === 'bundle'
-                          ? item.bundle?.title
-                          : language === 'ar'
-                          ? item.product?.nameAr
-                          : item.product?.nameEn}
+                            ? `${item.matchingPair?.pairName} (ثنائي)`
+                            : item.itemType === 'bundle'
+                              ? item.bundle?.title
+                              : language === 'ar'
+                                ? item.product?.nameAr
+                                : item.product?.nameEn}
                       </h3>
                     </div>
 
@@ -430,3 +430,4 @@ export default function CartPage() {
     </div>
   );
 }
+

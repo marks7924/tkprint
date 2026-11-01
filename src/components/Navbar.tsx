@@ -87,11 +87,10 @@ export const Navbar: React.FC = () => {
                   >
                     <Link
                       href={link.href}
-                      className={`inline-flex items-center gap-1 text-sm font-semibold transition-colors py-2 ${
-                        isActive
+                      className={`inline-flex items-center gap-1 text-sm font-semibold transition-colors py-2 ${isActive
                           ? 'text-[#D982A5] border-b-2 border-[#D982A5]'
                           : 'text-[#292329] hover:text-[#D982A5]'
-                      }`}
+                        }`}
                     >
                       {link.label}
                       <ChevronDown className="w-4 h-4 text-[#817780] transition-transform group-hover:rotate-180" />
@@ -120,11 +119,10 @@ export const Navbar: React.FC = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-semibold transition-colors py-2 ${
-                    isActive
+                  className={`text-sm font-semibold transition-colors py-2 ${isActive
                       ? 'text-[#D982A5] border-b-2 border-[#D982A5]'
                       : 'text-[#292329] hover:text-[#D982A5]'
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
@@ -281,11 +279,10 @@ export const Navbar: React.FC = () => {
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                      pathname === link.href
+                    className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${pathname === link.href
                         ? 'bg-[#FFF0F4] text-[#D982A5] font-bold'
                         : 'text-[#292329] hover:bg-[#FFF8FA]'
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </Link>
@@ -347,21 +344,19 @@ export const Navbar: React.FC = () => {
       <div className="lg:hidden fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-[#F0E4E9] z-40 px-3 py-2 flex items-center justify-around shadow-lg">
         <Link
           href="/"
-          className={`flex flex-col items-center text-xs font-semibold ${
-            pathname === '/' ? 'text-[#D982A5]' : 'text-[#817780]'
-          }`}
+          className={`flex flex-col items-center text-xs font-semibold ${pathname === '/' ? 'text-[#D982A5]' : 'text-[#817780]'
+            }`}
         >
           <div className="p-1">
-            <BrandLogo size="sm" showSubtitle={false} />
+            <BrandLogo size="sm" showSubtitle={false} asLink={false} />
           </div>
           <span className="text-[10px]">{t('nav.home')}</span>
         </Link>
 
         <Link
           href="/shop"
-          className={`flex flex-col items-center text-xs font-semibold ${
-            pathname.startsWith('/shop') ? 'text-[#D982A5]' : 'text-[#817780]'
-          }`}
+          className={`flex flex-col items-center text-xs font-semibold ${pathname.startsWith('/shop') ? 'text-[#D982A5]' : 'text-[#817780]'
+            }`}
         >
           <div className="p-1">
             <ShoppingBag className="w-5 h-5" />
@@ -371,9 +366,8 @@ export const Navbar: React.FC = () => {
 
         <Link
           href="/custom-studio"
-          className={`flex flex-col items-center text-xs font-semibold ${
-            pathname === '/custom-studio' ? 'text-[#D982A5]' : 'text-[#817780]'
-          }`}
+          className={`flex flex-col items-center text-xs font-semibold ${pathname === '/custom-studio' ? 'text-[#D982A5]' : 'text-[#817780]'
+            }`}
         >
           <div className="p-1">
             <Palette className="w-5 h-5" />
@@ -383,9 +377,8 @@ export const Navbar: React.FC = () => {
 
         <Link
           href="/wishlist"
-          className={`relative flex flex-col items-center text-xs font-semibold ${
-            pathname === '/wishlist' ? 'text-[#D982A5]' : 'text-[#817780]'
-          }`}
+          className={`relative flex flex-col items-center text-xs font-semibold ${pathname === '/wishlist' ? 'text-[#D982A5]' : 'text-[#817780]'
+            }`}
         >
           <div className="p-1">
             <Heart className="w-5 h-5" />
@@ -400,9 +393,8 @@ export const Navbar: React.FC = () => {
 
         <Link
           href="/cart"
-          className={`relative flex flex-col items-center text-xs font-semibold ${
-            pathname === '/cart' ? 'text-[#D982A5]' : 'text-[#817780]'
-          }`}
+          className={`relative flex flex-col items-center text-xs font-semibold ${pathname === '/cart' ? 'text-[#D982A5]' : 'text-[#817780]'
+            }`}
         >
           <div className="p-1">
             <ShoppingBag className="w-5 h-5" />
@@ -416,3 +408,4 @@ export const Navbar: React.FC = () => {
     </>
   );
 };
+

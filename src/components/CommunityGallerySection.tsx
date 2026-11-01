@@ -212,3 +212,4 @@ export const CommunityGallerySection: React.FC = () => {
     </section>
   );
 };
+

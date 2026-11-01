@@ -44,7 +44,7 @@ export default function AccountPage() {
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        
+
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
           <div className="flex items-center gap-4">
@@ -83,11 +83,10 @@ export default function AccountPage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold transition-all ${
-                  isActive
+                className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl text-xs font-bold transition-all ${isActive
                     ? 'bg-[#D982A5] text-white shadow-xs'
                     : 'bg-white text-[#292329] border border-[#F0E4E9] hover:bg-[#FFF0F4]'
-                }`}
+                  }`}
               >
                 <Icon className="w-4 h-4" />
                 <span>{language === 'ar' ? tab.labelAr : tab.labelEn}</span>
@@ -255,3 +254,4 @@ export default function AccountPage() {
     </div>
   );
 }
+

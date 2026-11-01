@@ -540,3 +540,4 @@ export const INITIAL_DESIGN_OF_WEEK: DesignOfWeekVote[] = [
     isWinner: true
   }
 ];
+

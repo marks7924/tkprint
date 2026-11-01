@@ -66,3 +66,4 @@ export const QuickShortcuts: React.FC = () => {
     </section>
   );
 };
+

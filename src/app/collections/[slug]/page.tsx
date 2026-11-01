@@ -35,7 +35,7 @@ export default function CollectionDetailPage({
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        
+
         {/* Banner */}
         <div className="relative rounded-[2.5rem] overflow-hidden bg-neutral-900 text-white p-8 sm:p-14 mb-10 shadow-xl">
           <div className="absolute inset-0 opacity-40">
@@ -82,3 +82,4 @@ export default function CollectionDetailPage({
     </div>
   );
 }
+

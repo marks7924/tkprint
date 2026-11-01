@@ -85,7 +85,7 @@ export default function StyleQuizPage() {
       <Navbar />
 
       <main className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-12">
-        
+
         {!quizCompleted ? (
           <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 border border-[#F0E4E9] soft-shadow-lg text-center">
             {/* Progress indicator */}
@@ -169,3 +169,4 @@ export default function StyleQuizPage() {
     </div>
   );
 }
+

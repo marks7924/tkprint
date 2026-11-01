@@ -150,3 +150,4 @@ export const FindYourPhoneBar: React.FC = () => {
     </div>
   );
 };
+

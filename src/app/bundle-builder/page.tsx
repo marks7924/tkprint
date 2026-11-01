@@ -126,7 +126,7 @@ export default function BundleBuilderPage() {
       <Navbar />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        
+
         {/* Title */}
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-2 shadow-2xs">
@@ -160,11 +160,10 @@ export default function BundleBuilderPage() {
                   setSelectedItems((prev) => prev.slice(0, tier.size));
                 }
               }}
-              className={`px-5 py-3.5 rounded-2xl border text-center transition-all ${
-                bundleSize === tier.size
+              className={`px-5 py-3.5 rounded-2xl border text-center transition-all ${bundleSize === tier.size
                   ? 'border-[#D982A5] bg-[#FFF0F4] ring-2 ring-[#EFA6C1]/40 shadow-xs'
                   : 'border-[#F0E4E9] bg-white hover:bg-[#FFF8FA]'
-              }`}
+                }`}
             >
               <span className="block font-black text-sm text-[#292329]">
                 {language === 'ar' ? tier.labelAr : tier.labelEn}
@@ -189,8 +188,8 @@ export default function BundleBuilderPage() {
                     ? `متبقي ${bundleSize - selectedItems.length} كفر لإكمال الباقة`
                     : `Add ${bundleSize - selectedItems.length} more to complete bundle`
                   : language === 'ar'
-                  ? '🎉 اكتملت باقتك بنجاح وجاهزة للإضافة للسلة!'
-                  : '🎉 Bundle is full and ready!'}
+                    ? '🎉 اكتملت باقتك بنجاح وجاهزة للإضافة للسلة!'
+                    : '🎉 Bundle is full and ready!'}
               </p>
             </div>
 
@@ -287,11 +286,10 @@ export default function BundleBuilderPage() {
             <button
               onClick={handleAddToCart}
               disabled={selectedItems.length < bundleSize}
-              className={`px-8 py-4 rounded-2xl font-bold text-sm flex items-center gap-2 shadow-lg transition-all ${
-                selectedItems.length === bundleSize
+              className={`px-8 py-4 rounded-2xl font-bold text-sm flex items-center gap-2 shadow-lg transition-all ${selectedItems.length === bundleSize
                   ? 'bg-[#D982A5] hover:bg-[#c96d93] text-white soft-shadow pill-button'
                   : 'bg-neutral-200 text-neutral-400 cursor-not-allowed'
-              }`}
+                }`}
             >
               <ShoppingBag className="w-4 h-4" />
               <span>
@@ -354,3 +352,4 @@ export default function BundleBuilderPage() {
     </div>
   );
 }
+
