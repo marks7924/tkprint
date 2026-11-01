@@ -57,11 +57,6 @@ export const MatchingCasesTeaser: React.FC = () => {
 
         {/* Right Side: Copy and Action */}
         <div className="lg:col-span-7 text-center lg:text-start">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-3 shadow-2xs">
-            <Percent className="w-3.5 h-3.5" />
-            <span>{language === 'ar' ? 'خصم 15% تلقائي عند طلب كفرين' : 'Automatic 15% Duo Discount'}</span>
-          </div>
-
           <h2 className="text-2xl sm:text-3xl font-black text-[#292329] tracking-tight">
             {language === 'ar'
               ? 'كفرات ثنائية.. كفران، قصة واحدة تجمعكما'

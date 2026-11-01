@@ -19,11 +19,6 @@ export const CustomStudioTeaser: React.FC = () => {
           
           {/* Left Text */}
           <div className="lg:col-span-7 text-center lg:text-start">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-4 shadow-2xs">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{language === 'ar' ? 'استوديو التصميم الحي 2026' : 'Interactive Custom Studio'}</span>
-            </div>
-
             <h2 className="text-3xl sm:text-4xl font-black text-[#292329] tracking-tight leading-tight">
               {language === 'ar' ? (
                 <>

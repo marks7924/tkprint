@@ -163,10 +163,10 @@ export const Navbar: React.FC = () => {
               <Search className="w-5 h-5" />
             </button>
 
-            {/* Wishlist Button */}
+            {/* Wishlist Button - desktop only */}
             <Link
               href="/wishlist"
-              className="relative p-2 text-[#292329] hover:text-[#D982A5] hover:bg-[#FFF0F4] rounded-full transition-colors"
+              className="hidden md:flex relative p-2 text-[#292329] hover:text-[#D982A5] hover:bg-[#FFF0F4] rounded-full transition-colors"
               aria-label={t('nav.wishlist')}
             >
               <Heart className="w-5 h-5" />
@@ -177,10 +177,10 @@ export const Navbar: React.FC = () => {
               )}
             </Link>
 
-            {/* Account / Admin shortcut */}
+            {/* Account / Admin shortcut - desktop only */}
             <Link
               href="/account"
-              className="p-2 text-[#292329] hover:text-[#D982A5] hover:bg-[#FFF0F4] rounded-full transition-colors"
+              className="hidden md:flex p-2 text-[#292329] hover:text-[#D982A5] hover:bg-[#FFF0F4] rounded-full transition-colors"
               aria-label={t('nav.account')}
             >
               <User className="w-5 h-5" />
@@ -341,7 +341,7 @@ export const Navbar: React.FC = () => {
       )}
 
       {/* Sticky Mobile Bottom Navigation Bar (as shown in web.jpg mobile view) */}
-      <div className="lg:hidden fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-[#F0E4E9] z-40 px-3 py-2 flex items-center justify-around shadow-lg">
+      <div className="lg:hidden fixed bottom-0 inset-x-0 w-full bg-white/95 backdrop-blur-md border-t border-[#F0E4E9] z-40 px-3 py-2 flex items-center justify-around shadow-lg">
         <Link
           href="/"
           className={`flex flex-col items-center text-xs font-semibold ${pathname === '/' ? 'text-[#D982A5]' : 'text-[#817780]'

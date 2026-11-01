@@ -26,11 +26,6 @@ export const DesignOfWeekSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FFF0F4] border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-2">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>{language === 'ar' ? 'تصويت المجتمع الأسبوعي' : 'Weekly Community Vote'}</span>
-          </div>
-
           <h2 className="text-2xl sm:text-3xl font-black text-[#292329] tracking-tight">
             {language === 'ar' ? 'تصميم الأسبوع القادم — صوّت لتصميمك المفضل' : 'Design of the Week — Cast Your Vote'}
           </h2>

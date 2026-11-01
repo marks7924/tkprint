@@ -89,14 +89,11 @@ export default function StyleQuizPage() {
         {!quizCompleted ? (
           <div className="bg-white rounded-[2.5rem] p-8 sm:p-12 border border-[#F0E4E9] soft-shadow-lg text-center">
             {/* Progress indicator */}
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FFF0F4] border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-6">
-              <Palette className="w-3.5 h-3.5" />
-              <span>
-                {language === 'ar'
-                  ? `السؤال ${currentStep + 1} من ${questions.length}`
-                  : `Question ${currentStep + 1} of ${questions.length}`}
-              </span>
-            </div>
+            <p className="text-xs font-bold text-[#D982A5] mb-4">
+              {language === 'ar'
+                ? `السؤال ${currentStep + 1} من ${questions.length}`
+                : `Question ${currentStep + 1} of ${questions.length}`}
+            </p>
 
             <div className="w-full bg-neutral-100 h-2 rounded-full mb-8 overflow-hidden max-w-xs mx-auto">
               <div

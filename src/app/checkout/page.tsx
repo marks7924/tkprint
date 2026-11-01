@@ -93,10 +93,6 @@ export default function CheckoutPage() {
 
         {/* Header */}
         <div className="mb-8">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-2 shadow-2xs">
-            <ShieldCheck className="w-3.5 h-3.5" />
-            <span>{t('checkout.guest_notice')}</span>
-          </div>
           <h1 className="text-3xl sm:text-4xl font-black text-[#292329] tracking-tight">
             {t('checkout.title')}
           </h1>

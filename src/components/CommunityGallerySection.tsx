@@ -48,10 +48,6 @@ export const CommunityGallerySection: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 text-center sm:text-start">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FFF0F4] border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-2">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>{language === 'ar' ? '#TKPrintVibes في يد عملائنا' : '#TKPrintVibes in the wild'}</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl font-black text-[#292329] tracking-tight">
               {language === 'ar' ? 'معرض المبدعين ومجتمع TK' : 'Community Gallery'}
             </h2>

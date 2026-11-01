@@ -42,11 +42,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ar" dir="rtl" className="h-full">
+    <html lang="ar" dir="rtl" className="h-full w-full overflow-x-hidden">
       <head>
         <link rel="icon" href="/assets/logo.jpg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#FFF8FA] text-[#292329] antialiased">
+      <body className="min-h-full w-full max-w-full overflow-x-hidden flex flex-col bg-[#FFF8FA] text-[#292329] antialiased pb-16 lg:pb-0">
         <LanguageProvider>
           <StoreProvider>
             {children}

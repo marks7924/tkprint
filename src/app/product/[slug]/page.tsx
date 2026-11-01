@@ -18,8 +18,11 @@ import {
   Check,
   MessageCircle,
   Plus,
-  Minus
+  Minus,
+  Compass,
+  Image as ImageIcon
 } from 'lucide-react';
+import { PhoneCase360Viewer } from '@/components/PhoneCase360Viewer';
 
 export default function ProductDetailPage({
   params
@@ -54,6 +57,7 @@ export default function ProductDetailPage({
   const [selectedFinish, setSelectedFinish] = useState<CaseFinish>(product.finishes[0] || 'matte');
   const [quantity, setQuantity] = useState<number>(1);
   const [activeImageIndex, setActiveImageIndex] = useState<number>(0);
+  const [galleryMode, setGalleryMode] = useState<'photos' | '360'>('photos');
 
   const currentModel = models.find((m) => m.id === activeModelId) || models[0];
   const isWishlisted = wishlist.includes(product.id);
@@ -121,40 +125,80 @@ export default function ProductDetailPage({
         {/* 2 Columns: Image Gallery & Product Buy Box */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
-          {/* LEFT: Image Gallery */}
+          {/* LEFT: Image Gallery & 360 3D Viewer */}
           <div className="lg:col-span-6 flex flex-col gap-4">
-            <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-white border border-[#F0E4E9] soft-shadow-lg relative p-4 flex items-center justify-center">
-              <img
-                src={product.images[activeImageIndex] || product.images[0]}
-                alt={product.nameEn}
-                className="w-full h-full object-cover rounded-2xl"
-              />
+            {/* View Switcher: Photos vs 360 3D */}
+            <div className="inline-flex items-center gap-1.5 p-1 bg-white border border-[#F0E4E9] rounded-2xl shadow-2xs self-center">
               <button
-                onClick={() => toggleWishlist(product.id)}
-                className={`absolute top-6 end-6 p-3 rounded-full backdrop-blur-md transition-colors ${isWishlisted
-                    ? 'bg-[#D982A5] text-white'
-                    : 'bg-white/80 text-[#817780] hover:text-[#D982A5]'
-                  }`}
+                onClick={() => setGalleryMode('photos')}
+                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                  galleryMode === 'photos'
+                    ? 'bg-[#D982A5] text-white shadow-xs'
+                    : 'text-[#817780] hover:text-[#292329]'
+                }`}
               >
-                <Heart className={`w-5 h-5 ${isWishlisted ? 'fill-current' : ''}`} />
+                <ImageIcon className="w-3.5 h-3.5" />
+                <span>{language === 'ar' ? 'صور المنتج' : 'Photos'}</span>
+              </button>
+              <button
+                onClick={() => setGalleryMode('360')}
+                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                  galleryMode === '360'
+                    ? 'bg-[#D982A5] text-white shadow-xs'
+                    : 'text-[#817780] hover:text-[#292329]'
+                }`}
+              >
+                <Compass className="w-3.5 h-3.5 animate-spin" style={{ animationDuration: '6s' }} />
+                <span>{language === 'ar' ? 'معاينة 360° تفاعلية' : '360° View'}</span>
               </button>
             </div>
 
-            {/* Thumbnails */}
-            {product.images.length > 1 && (
-              <div className="flex gap-3">
-                {product.images.map((img, idx) => (
+            {galleryMode === 'photos' ? (
+              <>
+                <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-white border border-[#F0E4E9] soft-shadow-lg relative p-4 flex items-center justify-center">
+                  <img
+                    src={product.images[activeImageIndex] || product.images[0]}
+                    alt={product.nameEn}
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
                   <button
-                    key={idx}
-                    onClick={() => setActiveImageIndex(idx)}
-                    className={`w-20 h-24 rounded-2xl overflow-hidden border-2 transition-all ${activeImageIndex === idx
-                        ? 'border-[#D982A5] ring-2 ring-[#EFA6C1]/30'
-                        : 'border-[#F0E4E9] opacity-70 hover:opacity-100'
-                      }`}
+                    onClick={() => toggleWishlist(product.id)}
+                    className={`absolute top-6 end-6 p-3 rounded-full backdrop-blur-md transition-colors ${
+                      isWishlisted
+                        ? 'bg-[#D982A5] text-white'
+                        : 'bg-white/80 text-[#817780] hover:text-[#D982A5]'
+                    }`}
                   >
-                    <img src={img} alt="thumbnail" className="w-full h-full object-cover" />
+                    <Heart className={`w-5 h-5 ${isWishlisted ? 'fill-current' : ''}`} />
                   </button>
-                ))}
+                </div>
+
+                {/* Thumbnails */}
+                {product.images.length > 1 && (
+                  <div className="flex gap-3 justify-center">
+                    {product.images.map((img, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setActiveImageIndex(idx)}
+                        className={`w-20 h-24 rounded-2xl overflow-hidden border-2 transition-all ${
+                          activeImageIndex === idx
+                            ? 'border-[#D982A5] ring-2 ring-[#EFA6C1]/30'
+                            : 'border-[#F0E4E9] opacity-70 hover:opacity-100'
+                        }`}
+                      >
+                        <img src={img} alt="thumbnail" className="w-full h-full object-cover" />
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="w-full bg-white rounded-[2.5rem] p-4 sm:p-6 border border-[#F0E4E9] soft-shadow-lg">
+                <PhoneCase360Viewer
+                  artworkUrl={product.images[0]}
+                  phoneModelName={currentModel.name}
+                  finish={selectedFinish}
+                />
               </div>
             )}
           </div>

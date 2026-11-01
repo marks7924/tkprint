@@ -61,13 +61,8 @@ export const FindYourPhoneBar: React.FC = () => {
       <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-[#F0E4E9] soft-shadow-lg">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
           
-          {/* Header text with playful dashes */}
+          {/* Header text */}
           <div className="flex-1 text-center lg:text-start">
-            <div className="flex items-center justify-center lg:justify-start gap-1 text-[#D982A5] mb-1">
-              <span className="w-2 h-0.5 bg-[#D982A5] rounded-full rotate-45" />
-              <span className="w-3 h-0.5 bg-[#D982A5] rounded-full" />
-              <span className="w-2 h-0.5 bg-[#D982A5] rounded-full -rotate-45" />
-            </div>
             <h2 className="text-xl sm:text-2xl font-black text-[#292329] tracking-tight">
               {t('find_phone.title')}
             </h2>

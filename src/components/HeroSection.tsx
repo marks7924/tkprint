@@ -20,16 +20,6 @@ export const HeroSection: React.FC = () => {
           
           {/* Left Column: Headline & Action Buttons */}
           <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-start relative z-10">
-            {/* Playful Doodles: Three accent dashes */}
-            <div className="flex items-center gap-1.5 mb-3 text-[#D982A5]">
-              <span className="inline-block w-2.5 h-1 bg-[#D982A5] rounded-full rotate-45" />
-              <span className="inline-block w-3.5 h-1 bg-[#D982A5] rounded-full -rotate-12" />
-              <span className="inline-block w-2.5 h-1 bg-[#D982A5] rounded-full -rotate-45" />
-              <span className="text-xs font-bold uppercase tracking-wider text-[#D982A5] ms-1">
-                {language === 'ar' ? 'تصاميم أصلية ومبتكرة' : 'Original Aesthetic Cases'}
-              </span>
-            </div>
-
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#292329] tracking-tight leading-[1.15]">
               {language === 'ar' ? (
@@ -117,9 +107,9 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Right Column: Editorial Visual Phone Stage (Recreating web.jpg) */}
-          <div className="lg:col-span-6 relative flex items-center justify-center">
+          <div className="lg:col-span-6 relative flex items-center justify-center w-full max-w-full overflow-hidden sm:overflow-visible">
             {/* Pastel Oval Stage Backdrop */}
-            <div className="relative w-full max-w-md sm:max-w-lg aspect-square rounded-[3rem] bg-gradient-to-tr from-[#FEEBF2] to-[#FFF5F8] p-6 flex items-center justify-center shadow-inner border border-white">
+            <div className="relative w-full max-w-[310px] sm:max-w-lg aspect-square rounded-[2.5rem] sm:rounded-[3rem] bg-gradient-to-tr from-[#FEEBF2] to-[#FFF5F8] p-4 sm:p-6 flex items-center justify-center shadow-inner border border-white">
               
               {/* Playful Doodles around stage */}
               {/* Floating Doodle Heart */}
@@ -145,8 +135,8 @@ export const HeroSection: React.FC = () => {
               <div className="relative w-full h-full flex items-center justify-center">
                 
                 {/* Case 1: Left - Blush Hearts Pattern Case */}
-                <div className="absolute -start-2 sm:start-2 bottom-10 w-36 sm:w-44 aspect-[1/2] rounded-[2rem] bg-gradient-to-b from-[#F2A4C0] to-[#E982A6] p-2.5 shadow-2xl transform -rotate-12 hover:-rotate-6 hover:scale-105 transition-all duration-300 z-10 border-2 border-white/60">
-                  <div className="w-full h-full rounded-[1.6rem] bg-[#EE9AB9] p-3 flex flex-col justify-between overflow-hidden relative">
+                <div className="absolute start-0 sm:start-2 bottom-6 sm:bottom-10 w-28 sm:w-44 aspect-[1/2] rounded-[1.6rem] sm:rounded-[2rem] bg-gradient-to-b from-[#F2A4C0] to-[#E982A6] p-2 sm:p-2.5 shadow-2xl transform -rotate-12 hover:-rotate-6 hover:scale-105 transition-all duration-300 z-10 border-2 border-white/60">
+                  <div className="w-full h-full rounded-[1.3rem] sm:rounded-[1.6rem] bg-[#EE9AB9] p-2.5 sm:p-3 flex flex-col justify-between overflow-hidden relative">
                     {/* Camera cutout */}
                     <div className="w-10 h-10 rounded-xl bg-[#292329]/80 self-start p-1.5 flex flex-wrap gap-1 shadow-inner">
                       <div className="w-3 h-3 rounded-full bg-black/90 border border-neutral-700" />
@@ -164,40 +154,40 @@ export const HeroSection: React.FC = () => {
                 </div>
 
                 {/* Case 2: Center - Good Vibes Only Cream Minimal Case */}
-                <div className="absolute z-20 w-40 sm:w-48 aspect-[1/2] rounded-[2.2rem] bg-[#F7EFE8] p-2.5 shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-white">
-                  <div className="w-full h-full rounded-[1.8rem] bg-[#FDF9F5] p-3.5 flex flex-col justify-between items-center relative overflow-hidden">
+                <div className="absolute z-20 w-32 sm:w-48 aspect-[1/2] rounded-[1.8rem] sm:rounded-[2.2rem] bg-[#F7EFE8] p-2 sm:p-2.5 shadow-2xl transform hover:scale-105 transition-all duration-300 border-2 border-white">
+                  <div className="w-full h-full rounded-[1.5rem] sm:rounded-[1.8rem] bg-[#FDF9F5] p-2.5 sm:p-3.5 flex flex-col justify-between items-center relative overflow-hidden">
                     {/* Camera cutout */}
-                    <div className="w-12 h-12 rounded-2xl bg-[#292329]/85 self-start p-1.5 flex flex-wrap gap-1 shadow-inner">
-                      <div className="w-3.5 h-3.5 rounded-full bg-black border border-neutral-700" />
-                      <div className="w-3.5 h-3.5 rounded-full bg-black border border-neutral-700" />
-                      <div className="w-3 h-3 rounded-full bg-black border border-neutral-700" />
+                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#292329]/85 self-start p-1 sm:p-1.5 flex flex-wrap gap-1 shadow-inner">
+                      <div className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full bg-black border border-neutral-700" />
+                      <div className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full bg-black border border-neutral-700" />
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-black border border-neutral-700" />
                     </div>
                     {/* Center Script text */}
                     <div className="text-center my-auto">
-                      <p className="font-serif italic text-2xl text-[#292329] leading-tight font-medium">
+                      <p className="font-serif italic text-lg sm:text-2xl text-[#292329] leading-tight font-medium">
                         good<br />vibes<br />only ♡
                       </p>
                     </div>
-                    <span className="text-[10px] font-semibold text-[#817780] tracking-widest">MINIMAL</span>
+                    <span className="text-[8px] sm:text-[10px] font-semibold text-[#817780] tracking-widest uppercase">MINIMAL</span>
                   </div>
                 </div>
 
                 {/* Case 3: Right - Lilac Ribbon Bows Case */}
-                <div className="absolute -end-2 sm:end-2 bottom-8 w-36 sm:w-44 aspect-[1/2] rounded-[2rem] bg-gradient-to-b from-[#DAC5E8] to-[#C8AEE0] p-2.5 shadow-xl transform rotate-12 hover:rotate-6 hover:scale-105 transition-all duration-300 z-10 border-2 border-white/60">
-                  <div className="w-full h-full rounded-[1.6rem] bg-[#D4BEDF] p-3 flex flex-col justify-between overflow-hidden relative">
+                <div className="absolute end-0 sm:end-2 bottom-5 sm:bottom-8 w-28 sm:w-44 aspect-[1/2] rounded-[1.6rem] sm:rounded-[2rem] bg-gradient-to-b from-[#DAC5E8] to-[#C8AEE0] p-2 sm:p-2.5 shadow-xl transform rotate-12 hover:rotate-6 hover:scale-105 transition-all duration-300 z-10 border-2 border-white/60">
+                  <div className="w-full h-full rounded-[1.3rem] sm:rounded-[1.6rem] bg-[#D4BEDF] p-2.5 sm:p-3 flex flex-col justify-between overflow-hidden relative">
                     {/* Camera cutout */}
-                    <div className="w-10 h-10 rounded-xl bg-[#292329]/80 self-end p-1.5 flex flex-wrap gap-1 shadow-inner">
-                      <div className="w-3 h-3 rounded-full bg-black/90 border border-neutral-700" />
-                      <div className="w-3 h-3 rounded-full bg-black/90 border border-neutral-700" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-black/90 border border-neutral-700" />
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-[#292329]/80 self-end p-1 sm:p-1.5 flex flex-wrap gap-1 shadow-inner">
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-black/90 border border-neutral-700" />
+                      <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-black/90 border border-neutral-700" />
+                      <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-black/90 border border-neutral-700" />
                     </div>
                     {/* Scattered Ribbon Bows */}
-                    <div className="absolute inset-0 flex flex-wrap gap-3 items-center justify-around opacity-80 p-3 pt-12">
+                    <div className="absolute inset-0 flex flex-wrap gap-2.5 sm:gap-3 items-center justify-around opacity-80 p-2.5 pt-10 sm:p-3 sm:pt-12">
                       {['🎀', '🎀', '🎀', '🎀', '🎀'].map((b, i) => (
-                        <span key={i} className="text-lg">{b}</span>
+                        <span key={i} className="text-base sm:text-lg">{b}</span>
                       ))}
                     </div>
-                    <span className="text-[10px] font-bold text-white/90 z-10 self-center">COQUETTE</span>
+                    <span className="text-[9px] sm:text-[10px] font-bold text-white/90 z-10 self-center">COQUETTE</span>
                   </div>
                 </div>
 

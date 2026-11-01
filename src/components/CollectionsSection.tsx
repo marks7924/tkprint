@@ -18,10 +18,6 @@ export const CollectionsSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <div className="flex items-center gap-1 text-[#D982A5] mb-1">
-              <span className="w-2 h-0.5 bg-[#D982A5] rounded-full rotate-45" />
-              <span className="w-3 h-0.5 bg-[#D982A5] rounded-full" />
-            </div>
             <h2 className="text-2xl sm:text-3xl font-black text-[#292329] tracking-tight">
               {t('collections.title')}
             </h2>

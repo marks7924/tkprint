@@ -58,11 +58,6 @@ export default function FindYourPhonePage() {
 
         {/* Title */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-2 shadow-2xs">
-            <Smartphone className="w-3.5 h-3.5" />
-            <span>{language === 'ar' ? 'البحث الذكي بالموديل' : 'Device Selector'}</span>
-          </div>
-
           <h1 className="text-3xl sm:text-5xl font-black text-[#292329] tracking-tight">
             {t('find_phone.title')}
           </h1>

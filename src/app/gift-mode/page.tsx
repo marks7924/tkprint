@@ -19,11 +19,6 @@ export default function GiftModePage() {
 
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-12">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-[#EFA6C1]/40 rounded-full text-xs font-bold text-[#D982A5] mb-2 shadow-2xs">
-            <Gift className="w-3.5 h-3.5" />
-            <span>{language === 'ar' ? 'خدمة إهداء فاخرة' : 'TK-PRINT Gift Experience'}</span>
-          </div>
-
           <h1 className="text-3xl sm:text-5xl font-black text-[#292329] tracking-tight">
             {language === 'ar' ? 'أهدِ كفراً يحكي قصة مميزة' : 'Gift a Personalized Case'}
           </h1>
